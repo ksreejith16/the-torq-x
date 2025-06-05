@@ -1,0 +1,26 @@
+/* Title styling */
+.fetuse-title {
+    color: #ffaa33;
+    text-align: center;
+    font-size: 2.7rem; /* Adjust for readability */
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Subtitle styling */
+.fetuse-subtitle {
+    color: white;
+   
+    text-align: center;
+    font-size: 1.5rem; /* Adjust for readability */
+    font-weight: 500;
+    max-width: 800px;
+    margin: 0 auto 40px; /* Centering */
+}
+/* Default Padding for non-home pages */
+.fetuses-area.pt-70 {
+    margin-top: 70px;
+    padding-top: 70px;
+}
+
+

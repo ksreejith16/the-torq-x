@@ -1,0 +1,105 @@
+/* Default margin-top for non-home pages */
+.mt-50 {
+  margin-top: 30px;
+}
+
+/* No margin-top for Home page */
+.mt-0 {
+  margin-top: 0;
+}
+
+/* Case Study Section */
+.case-study-section {
+  padding: 100px 0;
+  background: black; /* Premium black background */
+  text-align: center;
+}
+
+/* New Heading - "Customer Stories" */
+.case-study-heading {
+  font-size: 2.2rem; /* Balanced size */
+  font-weight: 600;
+  color: white; /* Ensuring visibility */
+  margin-bottom: 10px; /* Spacing before title */
+}
+
+/* Title Styling - Gradient */
+.case-study-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #ffb400;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+/* Subtitle Styling - Now in White for Contrast */
+.case-study-subtitle {
+  font-size: 1.3rem;
+  color: #ffffff; /* White for better readability */
+  font-weight: 500;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Case Study List */
+.case-study-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+}
+
+/* Case Study Card */
+.case-study-card {
+  background: linear-gradient(145deg, #1a1a1a, #000000);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(255, 180, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.case-study-card h3 {
+  font-size: 1.4rem;
+  color: #ffb400;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.case-study-card p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* Hover Effect */
+.case-study-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 35px rgba(255, 180, 0, 0.4);
+}
+
+/* CTA Button */
+.cta-button {
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  padding-top: 10;
+  border: none;
+  border-radius: 100px;
+  background: linear-gradient(45deg, #ffb400, #af002d);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 40px; /* Added this line for spacing */
+  display: inline-block; /* Added to ensure margin works correctly */
+}
+
+.cta-button:hover {
+  background: linear-gradient(45deg, #af002d, #ffb400);
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+}

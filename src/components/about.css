@@ -1,0 +1,50 @@
+/* New Section Styling */
+.new-section {
+    margin-top: 40px;
+}
+
+.new-section .highlight-text {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #ff7e5f; /* A vibrant color for emphasis */
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Button Styling */
+.new-section .secondary-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient for the button */
+    color: #fff; /* White text */
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 50px; /* Rounded corners */
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.new-section .secondary-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Subtle highlight */
+    transform: skewX(-45deg);
+    transition: all 0.5s ease-in-out;
+}
+
+.new-section .secondary-btn:hover::before {
+    left: 100%;
+}
+
+.new-section .secondary-btn:hover {
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+    background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Reverse gradient on hover */
+}

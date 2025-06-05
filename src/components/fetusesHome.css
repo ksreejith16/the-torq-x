@@ -1,0 +1,21 @@
+/* Title styling */
+.fetuses-area {
+    padding: 6rem 2rem 3rem; 
+}
+.fetuse-title {
+    color: #ffaa33;
+    text-align: center;
+    font-size: 2.7rem; /* Adjust for readability */
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Subtitle styling */
+.fetuse-subtitle {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem; /* Adjust for readability */
+    font-weight: 500;
+    max-width: 800px;
+    margin: 0 auto 40px; /* Centering */
+}

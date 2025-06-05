@@ -1,0 +1,54 @@
+.logo-carousel {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    background: linear-gradient(45deg, #222, #333);
+    display: flex;
+    align-items: center;
+}
+
+.logo-carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content;
+    gap: 50px;
+}
+
+/* Default logo item style */
+.logo-item {
+    width: 150px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(200, 200, 200, 0.2); /* Light semi-transparent grey */
+    border-radius: 8px;
+    padding: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Default logo filter (semi-transparent grey logos) */
+.logo-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: brightness(0.3) contrast(0.8); /* Dimmed effect */
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* When hovered, the selected logo stays normal, and others remain grey */
+.logo-item:hover {
+    background-color: white; /* Restore original white background */
+}
+
+.logo-item:hover img {
+    filter: brightness(1) contrast(1); /* Restore normal appearance */
+    transform: scale(1.1); /* Slight zoom effect */
+}

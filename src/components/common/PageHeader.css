@@ -1,0 +1,50 @@
+/* PageHeader.css */
+
+/* Contact page specific styles */
+.contact-banner {
+    background-image: none !important;
+}
+
+.contact-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), #000000 145%);
+    z-index: 0;
+}
+
+.contact-background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Keep the original section-banner styles from your template for other pages */
+.section-banner {
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+
+
+/* Add these styles at the end of your existing PageHeader.css */
+
+/* Enhance text visibility without changing other styles */
+.section-banner-content h1,
+.section-banner .breadcrumb-item,
+.section-banner .breadcrumb span {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Strengthen the overlay without changing other properties */
+.section-banner::before {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), #000000 145%);
+    opacity: 0.85;
+}

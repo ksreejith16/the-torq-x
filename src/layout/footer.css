@@ -1,0 +1,11 @@
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Adjusts position within section */
+    margin-bottom: 15px; /* Ensures proper spacing */
+}
+
+.footer-logo-img {
+    height: 90px;
+    max-width: 100%;
+}

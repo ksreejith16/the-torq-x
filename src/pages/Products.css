@@ -1,0 +1,127 @@
+.products {
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-top: 100px; /* Space between Header and OurTeam section */
+  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+  color: #f8fafc;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.products-subtitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: #ffaa33; /* Premium Gold */
+}
+
+.products-title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #e2e8f0;
+}
+
+.products-intro {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: #cbd5e1;
+}
+
+.products-intro span {
+  font-weight: 700;
+    color: #ffb400;
+ 
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 320px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.product-image-container {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.1);
+}
+
+.product-name {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  color: #ffaa33; /* Premium Gold */
+}
+
+.product-description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #e2e8f0;
+}
+
+.product-button {
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(45deg, #ff7a18, #af002d 70%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.product-button:hover {
+  background: linear-gradient(45deg, #af002d, #ff7a18 70%);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .products {
+    margin-top: 120px;
+    padding: 2rem 1rem;
+  }
+
+  .products-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 90%;
+  }
+
+  .product-title {
+    font-size: 2.5rem;
+  }
+}

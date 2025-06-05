@@ -1,0 +1,7 @@
+/* Force hide the filter container and its items */
+.filter-container {
+    display: none !important; /* Ensure it overrides any conflicting styles */
+    visibility: hidden;       /* Ensure it does not occupy space */
+    height: 0;                /* Remove its height */
+    overflow: hidden;         /* Prevent any content overflow */
+}

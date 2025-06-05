@@ -1,0 +1,95 @@
+/* Team Section Title */
+.team-title {
+  font-size: 15rem;
+  font-weight: 700;
+  text-align: center;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+}
+
+/* Elegant Underline Effect */
+.team-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(45deg, #ffb400, #af7c00);
+  margin: 10px auto 20px;
+  border-radius: 2px;
+}
+
+/* Team Tagline Styling - Refined for Professional Look */
+.team-tagline {
+  text-transform: uppercase;
+  font-size: 2.7rem; /* Slightly larger for emphasis */
+  font-weight: 600;
+  text-align: center;
+  color: #ffb400; /* Gold */
+  max-width: 750px;
+  margin: 1px auto 2px; /* Adjusted spacing */
+  padding: 10px 25px;
+  line-height: 1.6;
+  letter-spacing: 1.2px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Elegant Quotation Marks */
+.team-tagline::before,
+.team-tagline::after {
+  content: '“';
+  font-size: 2rem;
+  color: #af7c00; /* Dark Gold */
+  position: absolute;
+}
+
+.team-tagline::before {
+  left: -20px;
+  top: -5px;
+}
+
+.team-tagline::after {
+  content: '”';
+  right: -20px;
+  bottom: -5px;
+}
+
+/* Hover Effect - Elegant Glow */
+.team-tagline:hover {
+  color: #ffd700; /* Brighter Gold */
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0px 0px 10px rgba(255, 180, 0, 0.6);
+}
+
+/* Subtagline Styling - Balanced & Readable */
+.team-subtagline {
+  color: white;
+  text-align: center;
+  font-size: 1.8rem; /* Slightly smaller than tagline */
+  font-weight: 500;
+  max-width: 750px;
+  margin: 10px auto 30px; /* Adjusted margin for better spacing */
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* Adding a subtle fade-in animation */
+.team-subtagline,
+.team-tagline {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
