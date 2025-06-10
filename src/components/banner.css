@@ -59,23 +59,76 @@
     color: #fff;
 }
 
+/* ===== Headline Styling ===== */
 .animated-text, h2 {
-    font-size: 54px;
+    font-size: 48px;
     font-weight: 700;
     color: #fff;
     text-transform: capitalize;
     line-height: 1.4;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
 }
 
 .changing-word {
     display: inline-block;
     font-weight: 800;
-    font-size: 72px;
+    font-size: 58px;
     color: #ff7a00;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+
+/* ===== Media Queries (Updated Sizes) ===== */
+@media (min-width: 1400px) {
+    .animated-text, h2 {
+        font-size: 54px;
+    }
+
+    .changing-word {
+        font-size: 66px;
+    }
+}
+
+@media (max-width: 992px) {
+    .animated-text, h2 {
+        font-size: 42px;
+    }
+
+    .changing-word {
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 768px) {
+    .animated-text, h2 {
+        font-size: 36px;
+    }
+
+    .changing-word {
+        font-size: 46px;
+    }
+}
+
+@media (max-width: 576px) {
+    .animated-text, h2 {
+        font-size: 30px;
+    }
+
+    .changing-word {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 375px) {
+    .animated-text, h2 {
+        font-size: 28px;
+    }
+
+    .changing-word {
+        font-size: 36px;
+    }
+}
+
 
 /* Banner Button Styles */
 .banner-area .contact {
@@ -177,23 +230,11 @@
         max-width: 1000px;
     }
     
-    .animated-text, h2 {
-        font-size: 60px;
-    }
-    
-    .changing-word {
-        font-size: 80px;
-    }
+   
 }
 
 @media (max-width: 992px) {
-    .animated-text, h2 {
-        font-size: 48px;
-    }
     
-    .changing-word {
-        font-size: 64px;
-    }
     
     .banner-area .contact {
         padding: 18px 36px;
@@ -202,13 +243,6 @@
 }
 
 @media (max-width: 768px) {
-    .animated-text, h2 {
-        font-size: 40px;
-    }
-    
-    .changing-word {
-        font-size: 54px;
-    }
     
     .banner-area .contact {
         padding: 16px 32px;
@@ -222,14 +256,7 @@
 }
 
 @media (max-width: 576px) {
-    .animated-text, h2 {
-        font-size: 34px;
-        line-height: 1.3;
-    }
     
-    .changing-word {
-        font-size: 46px;
-    }
     
     .banner-top-title {
         font-size: 20px;
@@ -253,13 +280,6 @@
 }
 
 @media (max-width: 375px) {
-    .animated-text, h2 {
-        font-size: 30px;
-    }
-    
-    .changing-word {
-        font-size: 40px;
-    }
     
     .banner-top-title {
         font-size: 18px;

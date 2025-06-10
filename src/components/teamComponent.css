@@ -1,95 +1,453 @@
-/* Team Section Title */
-.team-title {
-  font-size: 15rem;
-  font-weight: 700;
-  text-align: center;
-  background: white;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
+/* Team Area Base Styles */
+.team-area {
   position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+  padding: 120px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
-/* Elegant Underline Effect */
+/* Animated Background Elements */
+.team-bg-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gradient-mesh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at 20% 20%, rgba(255, 180, 0, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(255, 215, 0, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(175, 124, 0, 0.04) 0%, transparent 70%);
+  animation: meshFloat 20s ease-in-out infinite;
+}
+
+.floating-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgba(255, 180, 0, 0.1), rgba(255, 215, 0, 0.05));
+  backdrop-filter: blur(20px);
+  animation: floatUpDown 6s ease-in-out infinite;
+}
+
+.circle-1 {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.circle-3 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  left: 70%;
+  animation-delay: 4s;
+}
+
+/* Team Header Styles */
+.team-header {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 80px;
+}
+
+.team-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(255, 180, 0, 0.15), rgba(255, 215, 0, 0.1));
+  border: 1px solid rgba(255, 180, 0, 0.3);
+  backdrop-filter: blur(10px);
+  color: #ffb400;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.team-badge:hover {
+  background: linear-gradient(135deg, rgba(255, 180, 0, 0.25), rgba(255, 215, 0, 0.15));
+  border-color: rgba(255, 180, 0, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 180, 0, 0.2);
+}
+
+/* Team Section Title - Enhanced */
+.team-title {
+  font-size: clamp(4rem, 12vw, 15rem);
+  font-weight: 800;
+  text-align: center;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 50%, #e0e0e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  margin: 20px 0;
+  line-height: 0.9;
+  text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced Underline Effect */
 .team-title::after {
   content: "";
   display: block;
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(45deg, #ffb400, #af7c00);
-  margin: 10px auto 20px;
-  border-radius: 2px;
+  width: 120px;
+  height: 6px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    #ffb400 20%, 
+    #ffd700 50%, 
+    #ffb400 80%, 
+    transparent 100%
+  );
+  margin: 25px auto 30px;
+  border-radius: 3px;
+  box-shadow: 0 0 20px rgba(255, 180, 0, 0.4);
+  animation: glowPulse 3s ease-in-out infinite;
 }
 
-/* Team Tagline Styling - Refined for Professional Look */
+/* Team Tagline Styling - Enhanced */
 .team-tagline {
   text-transform: uppercase;
-  font-size: 2.7rem; /* Slightly larger for emphasis */
-  font-weight: 600;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  font-weight: 700;
   text-align: center;
-  color: #ffb400; /* Gold */
-  max-width: 750px;
-  margin: 1px auto 2px; /* Adjusted spacing */
-  padding: 10px 25px;
-  line-height: 1.6;
-  letter-spacing: 1.2px;
+  background: linear-gradient(135deg, #ffb400 0%, #ffd700 50%, #ffb400 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  max-width: 850px;
+  margin: 20px auto 15px;
+  padding: 15px 30px;
+  line-height: 1.4;
+  letter-spacing: 1.5px;
   position: relative;
-  display: inline-block;
+  display: block;
+  transition: all 0.4s ease;
 }
 
-/* Elegant Quotation Marks */
+/* Enhanced Quotation Marks */
 .team-tagline::before,
 .team-tagline::after {
-  content: '“';
-  font-size: 2rem;
-  color: #af7c00; /* Dark Gold */
+  content: '"';
+  font-size: 3rem;
+  color: rgba(255, 180, 0, 0.6);
   position: absolute;
+  font-family: Georgia, serif;
+  font-weight: 400;
+  transition: all 0.3s ease;
 }
 
 .team-tagline::before {
-  left: -20px;
-  top: -5px;
+  left: -25px;
+  top: -10px;
 }
 
 .team-tagline::after {
-  content: '”';
-  right: -20px;
-  bottom: -5px;
+  right: -25px;
+  bottom: -15px;
 }
 
-/* Hover Effect - Elegant Glow */
+/* Enhanced Hover Effect */
 .team-tagline:hover {
-  color: #ffd700; /* Brighter Gold */
-  transition: all 0.3s ease-in-out;
-  text-shadow: 0px 0px 10px rgba(255, 180, 0, 0.6);
+  transform: translateY(-2px);
+  filter: drop-shadow(0 8px 25px rgba(255, 180, 0, 0.3));
 }
 
-/* Subtagline Styling - Balanced & Readable */
+.team-tagline:hover::before,
+.team-tagline:hover::after {
+  color: #ffd700;
+  transform: scale(1.1);
+}
+
+/* Subtagline Styling - Enhanced */
 .team-subtagline {
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   text-align: center;
-  font-size: 1.8rem; /* Slightly smaller than tagline */
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
   font-weight: 500;
-  max-width: 750px;
-  margin: 10px auto 30px; /* Adjusted margin for better spacing */
-  line-height: 1.5;
-  opacity: 0.9;
+  max-width: 800px;
+  margin: 15px auto 40px;
+  line-height: 1.6;
+  position: relative;
+  padding: 0 20px;
 }
 
-/* Adding a subtle fade-in animation */
-.team-subtagline,
-.team-tagline {
-  animation: fadeInUp 1s ease-in-out;
+.team-subtagline::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 180, 0, 0.5), transparent);
+}
+
+/* Team Grid Layout - Enhanced */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 50px;
+  max-width: 1000px;
+  margin: 80px auto 0;
+  padding: 0 30px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Individual Team Member Container - Enhanced */
+.team-member {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.team-card-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.team-card-wrapper:hover {
+  transform: translateY(-15px) scale(1.02);
+}
+
+.team-card-glow {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(135deg, rgba(255, 180, 0, 0.2), rgba(255, 215, 0, 0.1));
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  filter: blur(15px);
+}
+
+.team-card-wrapper:hover .team-card-glow {
+  opacity: 1;
+}
+
+/* Decorative Line */
+.team-decorative-line {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 180, 0, 0.3) 20%, 
+    rgba(255, 180, 0, 0.8) 50%, 
+    rgba(255, 180, 0, 0.3) 80%, 
+    transparent 100%
+  );
+  transform-origin: center;
+}
+
+/* Animations */
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-20px) rotate(1deg); }
+  50% { transform: translateY(-10px) rotate(0deg); }
+  75% { transform: translateY(-30px) rotate(-1deg); }
+}
+
+@keyframes meshFloat {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(10px, -10px) rotate(0.5deg); }
+  50% { transform: translate(-5px, 5px) rotate(-0.5deg); }
+  75% { transform: translate(-10px, -5px) rotate(0.25deg); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(255, 180, 0, 0.4);
+    opacity: 1;
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(255, 180, 0, 0.8);
+    opacity: 0.8;
+  }
 }
 
 @keyframes fadeInUp {
   from {
-      opacity: 0;
-      transform: translateY(10px);
+    opacity: 0;
+    transform: translateY(30px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design - Enhanced */
+@media (max-width: 1200px) {
+  .team-grid {
+    max-width: 800px;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-area {
+    padding: 80px 0;
+  }
+  
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 450px;
+    padding: 0 20px;
+  }
+  
+  .team-tagline::before,
+  .team-tagline::after {
+    display: none;
+  }
+  
+  .team-header {
+    margin-bottom: 60px;
+  }
+  
+  .floating-circle {
+    opacity: 0.3;
+  }
+  
+  .circle-1 {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .circle-2 {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .circle-3 {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .team-grid {
+    gap: 30px;
+    padding: 0 15px;
+    max-width: 350px;
+  }
+  
+  .team-badge {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .team-title::after {
+    width: 80px;
+    height: 4px;
+    margin: 20px auto 25px;
+  }
+  
+  .team-subtagline {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .team-area {
+    padding: 60px 0;
+  }
+  
+  .team-grid {
+    max-width: 300px;
+  }
+  
+  .team-tagline,
+  .team-subtagline {
+    padding: 0 10px;
+  }
+}
+
+/* High-resolution displays */
+@media (min-width: 1400px) {
+  .team-grid {
+    max-width: 1200px;
+    gap: 60px;
+  }
+  
+  .team-area {
+    padding: 150px 0;
+  }
+}
+
+/* Dark theme enhancements */
+@media (prefers-color-scheme: dark) {
+  .team-area {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #0a0a0a 100%);
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .floating-circle,
+  .gradient-mesh,
+  .team-title::after {
+    animation: none;
+  }
+  
+  .team-card-wrapper:hover {
+    transform: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .team-bg-elements,
+  .floating-circle,
+  .gradient-mesh {
+    display: none;
+  }
+  
+  .team-area {
+    background: white;
+    color: black;
+  }
+  
+  .team-title,
+  .team-tagline {
+    color: black !important;
+    -webkit-text-fill-color: black !important;
   }
 }

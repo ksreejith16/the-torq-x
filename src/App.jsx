@@ -10,7 +10,7 @@ import PricingComponent from './components/pricingComponent'
 import BlogsComponent from './components/blogsComponent'
 import InstagramGallery from './components/instagramGallery'
 import { ScrollRestoration } from 'react-router-dom'
-import ProductsHome from './pages/ProductsHome'
+import ServicesHome from './pages/ServicesHome'
 import CaseStudy from './components/CaseStudy'
 import HowWeHelp from './components/HowWeHelp'
 import LogoCarousel from './components/LogoCarousel'
@@ -23,7 +23,7 @@ const Home = () => {
       
       {/* <About /> */}
       {/* <Brands /> */}
-     <ProductsHome/>
+     <ServicesHome/>
      <Fetuses />
       <TeamComponent />
       <CaseStudy/>
@@ -38,4 +38,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;

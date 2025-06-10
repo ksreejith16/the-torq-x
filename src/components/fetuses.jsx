@@ -7,7 +7,7 @@ const featuresData = [
         id: 1,
         icon: "fi fi-tr-file-user",
         title: "Defining the Problem Statement",
-        desc: "“Insight Discovery”  we listen, understand, and define the core challenges that drive your need for AI solutions.",
+        desc: "“Insight Discovery”  we listen, understand, and define the core challenges that fits in your product development process.",
         link: "/contact"
     },
     {
@@ -45,9 +45,10 @@ const Fetuses = () => {
             className={`fetuses-area ${isHomePage ? 'pt-70' : 'pt-70'}`}
         >
             <div className="container-fluid">
-                <h1 className="fetuse-title">AI THAT FITS YOU</h1>
+                <h1 className="fetuse-title">Integrated process solutions that fits you </h1>
                 <p className="fetuse-subtitle">
-                    We craft AI products tailored to your business, turning your ideas into tech magic!
+                    Our Integrated Process solutions that gels in with your Engineering Product Development 
+
                 </p>
                 <div className="row justify-content-center g-0">
                     {featuresData.map(({ id, desc, icon, link, title }) => (

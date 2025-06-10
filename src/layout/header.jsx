@@ -9,21 +9,16 @@ const menuList = [
     name: "Home",
     dropDownList: false,
   },
+  
   {
     id: "2",
-    path: "/products",
-    name: "Products",
-    
-  },
-  {
-    id: "3",
     path: "/services",
     name: "Services",
     dropDownList: false,
   },
 
   {
-    id: "4",
+    id: "3",
     path: "/customer-stories",
     name: "Customer Stories",
     dropDownList: false,
