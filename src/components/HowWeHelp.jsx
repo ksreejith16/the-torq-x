@@ -23,7 +23,7 @@ const HowWeHelp = () => {
             The Power of Integrated Process Framework 
           </h2>
           <p className="help-description">
-            The true power of Integrated Process Framework isn't in the tech—it's how we make it work for you++6-+. At{" "}
+            The true power of Integrated Process Framework isn't in the tech—it's how we make it work for you. At{" "}
             <span className="torq-x">Torq X</span>, we craft a custom LLM that grows with your business, making AI do what you need.
           </p>
         </div>
