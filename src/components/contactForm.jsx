@@ -64,7 +64,7 @@ const ContactForm = () => {
                         <div className="section-title">
                             <div className="width">
                                 <div className="sub-t">Contact</div>
-                                <h2>Walk with us on the AI journey</h2>
+                                <h2>Walk With US on the Process Transformation Journey</h2>
                                 <p style={{
                                     fontSize: '1.1rem',
                                     lineHeight: '1.6',
@@ -73,7 +73,7 @@ const ContactForm = () => {
                                 }}>
                                     Where every connection sparks tomorrow's innovations. 
                                     <br />
-                                       Reach out today and join Torq X AI in redefining the future.
+                                       Reach out today and join Torq X in redefining the future.
                                 </p>
                             </div>
                         </div>
@@ -187,4 +187,4 @@ const ContactForm = () => {
     )
 }
 
-export default ContactForm
+export default ContactForm;

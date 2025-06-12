@@ -8,98 +8,391 @@
   margin-top: 0;
 }
 
+/* Keyframe Animations */
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  50% { 
+    transform: translateY(-20px) rotate(5deg); 
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { 
+    left: -100%; 
+  }
+  100% { 
+    left: 100%; 
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 180, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 20px rgba(255, 180, 0, 0);
+  }
+}
+
 /* Case Study Section */
 .case-study-section {
-  padding: 100px 0;
-  background: black; /* Premium black background */
+  padding: 80px 20px 100px;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
 }
 
-/* New Heading - "Customer Stories" */
+/* Animated Background Elements */
+.case-study-section::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 180, 0, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+  z-index: 1;
+}
+
+.case-study-section::after {
+  content: '';
+  position: absolute;
+  bottom: 20%;
+  right: 15%;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(175, 0, 45, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite reverse;
+  z-index: 1;
+}
+
+/* Ensure content stays above background elements */
+.case-study-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Customer Stories Heading - Enhanced Badge Style */
 .case-study-heading {
-  font-size: 2.2rem; /* Balanced size */
+  display: inline-block;
+  font-size: 0.9rem;
   font-weight: 600;
-  color: white; /* Ensuring visibility */
-  margin-bottom: 10px; /* Spacing before title */
+  color: #ffb400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  padding: 8px 24px;
+  background-color: rgba(255, 180, 0, 0.1);
+  border: 1px solid rgba(255, 180, 0, 0.3);
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  animation: slideInUp 0.8s ease-out;
 }
 
-/* Title Styling - Gradient */
+/* Title Styling - Enhanced Gradient */
 .case-study-title {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
   text-transform: uppercase;
-  background: #ffb400;
+  background: linear-gradient(135deg, #ffb400 0%, #af002d 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 10px;
+  background-clip: text;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  animation: slideInUp 0.8s ease-out 0.2s both;
 }
 
-/* Subtitle Styling - Now in White for Contrast */
+/* Subtitle Styling - Enhanced Typography */
 .case-study-subtitle {
-  font-size: 1.3rem;
-  color: #ffffff; /* White for better readability */
-  font-weight: 500;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
   max-width: 800px;
-  margin: 0 auto 40px;
-  line-height: 1.6;
-  opacity: 0.9;
+  margin: 0 auto 60px;
+  line-height: 1.7;
+  font-family: "Inter", system-ui, sans-serif;
+  animation: slideInUp 0.8s ease-out 0.4s both;
 }
 
-/* Case Study List */
+/* Case Study List - Enhanced Grid */
 .case-study-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
   max-width: 1200px;
-  margin: 0 auto 50px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
 }
 
-/* Case Study Card */
+/* Case Study Card - Premium Design */
 .case-study-card {
-  background: linear-gradient(145deg, #1a1a1a, #000000);
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0px 10px 30px rgba(255, 180, 0, 0.2);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background: linear-gradient(145deg, rgba(26, 26, 26, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%);
+  padding: 40px 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 180, 0, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 180, 0, 0.05);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideInUp 0.8s ease-out both;
 }
 
+/* Staggered animation for cards */
+.case-study-card:nth-child(1) { animation-delay: 0.6s; }
+.case-study-card:nth-child(2) { animation-delay: 0.8s; }
+.case-study-card:nth-child(3) { animation-delay: 1.0s; }
+
+/* Card Glow Effect */
+.case-study-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffb400, transparent);
+  opacity: 0.6;
+}
+
+/* Shimmer Effect */
+.case-study-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+  opacity: 0;
+}
+
+/* Card Title */
 .case-study-card h3 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: #ffb400;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 2;
 }
 
+/* Card Description */
 .case-study-card p {
   font-size: 1rem;
-  color: #ccc;
-  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+  position: relative;
+  z-index: 2;
 }
 
-/* Hover Effect */
+/* Hover Indicator Arrow */
+.case-study-card::after {
+  content: '→';
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffb400, #af002d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  opacity: 0.6;
+  transform: scale(1);
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+
+/* Enhanced Hover Effects */
 .case-study-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 15px 35px rgba(255, 180, 0, 0.4);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(255, 180, 0, 0.2), 0 0 0 1px rgba(255, 180, 0, 0.2);
 }
 
-/* CTA Button */
+.case-study-card:hover::after {
+  opacity: 1;
+  transform: scale(1.2);
+  left: 0;
+}
+
+/* CTA Button - Premium Design */
 .cta-button {
-  font-size: 1.2rem;
-  padding: 12px 30px;
-  padding-top: 10;
+  font-size: 1.1rem;
+  padding: 16px 40px;
   border: none;
-  border-radius: 100px;
-  background: linear-gradient(45deg, #ffb400, #af002d);
+  border-radius: 50px;
+  background: linear-gradient(135deg, #ffb400 0%, #af002d 100%);
   color: white;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  margin-top: 40px; /* Added this line for spacing */
-  display: inline-block; /* Added to ensure margin works correctly */
+  margin-top: 40px;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(255, 180, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideInUp 0.8s ease-out 1.2s both;
 }
 
+/* Button Shimmer Effect */
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+/* Button Hover Effects */
 .cta-button:hover {
-  background: linear-gradient(45deg, #af002d, #ffb400);
   transform: scale(1.05);
-  box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 20px 40px rgba(255, 180, 0, 0.3);
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button:active {
+  transform: scale(0.95);
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 1024px) {
+  .case-study-section {
+    padding: 70px 15px 90px;
+  }
+  
+  .case-study-list {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-study-section {
+    padding: 60px 15px 80px;
+  }
+  
+  .case-study-list {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 15px;
+  }
+  
+  .case-study-title {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+  
+  .case-study-subtitle {
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+  
+  .case-study-card {
+    padding: 30px 25px;
+  }
+  
+  /* Hide background elements on mobile for better performance */
+  .case-study-section::before,
+  .case-study-section::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .case-study-section {
+    padding: 50px 10px 70px;
+  }
+  
+  .case-study-title {
+    font-size: 1.8rem;
+  }
+  
+  .case-study-subtitle {
+    font-size: 1rem;
+  }
+  
+  .case-study-card {
+    padding: 25px 20px;
+    margin: 0 5px;
+  }
+  
+  .case-study-heading {
+    font-size: 0.8rem;
+    padding: 6px 20px;
+  }
+  
+  .cta-button {
+    font-size: 1rem;
+    padding: 14px 30px;
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+.case-study-card:focus,
+.cta-button:focus {
+  outline: 2px solid #ffb400;
+  outline-offset: 4px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .case-study-card,
+  .case-study-heading,
+  .case-study-title,
+  .case-study-subtitle,
+  .cta-button {
+    animation: none;
+  }
+  
+  .case-study-section::before,
+  .case-study-section::after {
+    animation: none;
+  }
+  
+  .case-study-card {
+    transition: none;
+  }
 }

@@ -5,29 +5,19 @@ import "./CaseStudy.css";
 
 const caseStudies = [
   {
-    industry: "Automotive Industry",
+    industry: "OEM, U.S",
     description:
-      "A major auto manufacturer used our Architecture Design Generator to cut prototyping time by 30%, speeding up time-to-market for new models.",
+    "Created Integrated Processes by leveraging ASPICE 4.0 and ISO 26262."
   },
   {
-    industry: "Healthcare Sector",
+    industry: "Tier 1, U.S",
     description:
-      "A leading healthcare provider used Torq SPICE to slash response times by 50%, boosting both operational efficiency and staff well-being.",
+      "Tool chain integration with ASPICE 3.1 model requirements and addressing the gaps."
   },
   {
-    industry: "E-commerce",
+    industry: "Tier 1, Europe",
     description:
-      "An e-commerce brand turned vague project scopes into detailed, actionable plans using our Requirements Generator—cutting project timelines by 25%.",
-  },
-  {
-    industry: "Banking",
-    description:
-      "Our custom AI solutions helped a major bank streamline data processing and decision-making, leading to a 20% increase in customer satisfaction.",
-  },
-  {
-    industry: "Education",
-    description:
-      "AI-powered tools helped a major educational platform personalize learning pathways for students, improving engagement by 40%.",
+      "Perform Tool Assessment to identify value added and non-value added activities and compliance to ASPICE v4.0 standard requirements.",
   },
 ];
 

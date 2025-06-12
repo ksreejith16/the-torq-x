@@ -20,10 +20,10 @@ const HowWeHelp = () => {
       <div className="help-top">
         <div className="content-wrapper">
           <h2 className="help-title">
-            The Secret No One Tells You About AI
+            The Power of Integrated Process Framework 
           </h2>
           <p className="help-description">
-            The true power of AI isn't in the tech—it's how we make it work for you. At{" "}
+            The true power of Integrated Process Framework isn't in the tech—it's how we make it work for you++6-+. At{" "}
             <span className="torq-x">Torq X</span>, we craft a custom LLM that grows with your business, making AI do what you need.
           </p>
         </div>

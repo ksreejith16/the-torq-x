@@ -21,7 +21,7 @@ const Footer = () => {
                     <img src={logo} alt="Torq AI" className="footer-logo-img" />
                   </Link>
                 </div>
-                <p><strong>Torq X AI – Igniting the Future</strong></p>
+                <p><strong>Torq X – Igniting the Future</strong></p>
                 <p>Where every algorithm sparks innovation, fueling a digital revolution that's transforming tomorrow, today.</p>
                 <ul className="social-links">
                   <li><Link to="https://www.facebook.com/" target="_blank"><i className="ri-facebook-fill"></i></Link></li>
@@ -37,7 +37,6 @@ const Footer = () => {
                 <h3>Links</h3>
                 <ul className="links-list">
                   <li><Link to="/" onClick={handleScrollToTop}>Home</Link></li>
-                  <li><Link to="/products" onClick={handleScrollToTop}>Products</Link></li>
                   <li><Link to="/services" onClick={handleScrollToTop}>Services</Link></li>
                   <li><Link to="/team" onClick={handleScrollToTop}>Our Team</Link></li>
                   <li><Link to="/services" onClick={handleScrollToTop}>Customer Stories</Link></li>
@@ -58,7 +57,7 @@ const Footer = () => {
               <div className="single-footer-widget">
                 <h3>Newsletter</h3>
                 <div className="footer-newsletter-info">
-                  <p>Join over <span>11600</span> people getting our emails Lorem ipsum dolor sit amet consectet </p>
+                  <p>Join over <span>11600</span> </p>
                   <form className="newsletter-form" data-toggle="validator">
                     <label><i className='bx bx-envelope-open'></i></label>
                     <input type="text" className="input-newsletter" placeholder="Enter your email address" name="EMAIL" required autoComplete="off" />
@@ -72,7 +71,7 @@ const Footer = () => {
         </div>
         <div className="pr-line"></div>
         <div className="footer-bottom-area">
-          <p>©  2025 Torq X AI. All Rights Reserved. </p>
+          <p>©  2025 Torq X . All Rights Reserved. </p>
         </div>
       </div>
       <div className="lines">
