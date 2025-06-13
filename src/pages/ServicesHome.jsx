@@ -20,7 +20,7 @@ const serviceshome = [
   },
   {
     id: 3,
-    name: "Functional Safety",
+    name: "Cybersecurity",
     image: service3,
     description: "ISO 21434 standard to ensure vehicle security.",
   },
@@ -59,12 +59,17 @@ const servicesHome = () => {
             <p className="servicehome-description">{service.description}</p>
           <button
   className="servicehome-button"
-  onClick={() => window.open("https://thetorq.ai", "_blank")}
+  onClick={() => {
+    if (service.id === 4) {
+      window.open("https://thetorq.ai", "_blank");
+    } else {
+      window.location.href = "/contact";
+    }
+  }}
 >
   Learn More
 </button>
-
-          </div>
+  </div>
         ))}
       </div>
     </div>

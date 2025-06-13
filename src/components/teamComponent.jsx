@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from "framer-motion";
 import './teamComponent.css'
 import img_1 from "../assets/img/ramkumar.png"
-import img_3 from "../assets/img/about-image-3.jpg"
+import img_3 from "../assets/img/harini.png"
 import TeamCard from './common/teamCard';
 
 const teamData = [
