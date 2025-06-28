@@ -4,7 +4,7 @@ import "./banner.css";
 import torqVideoMp4 from "../assets/videos/torqvideo_optimized.mp4";
 import torqVideoWebm from "../assets/videos/torqvideo_optimized.webm";
 
-const words = ["ASPICE.", "Cybersecurity.", "ISO 26262.", "AI-Powered Compliance Engine."];
+const words = ["ASPICE.", "Cybersecurity.", "Functional Safety.", "AI-Powered Compliance Engine."];
 
 const Banner = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);

@@ -39,7 +39,7 @@ const Footer = () => {
                   <li><Link to="/" onClick={handleScrollToTop}>Home</Link></li>
                   <li><Link to="/services" onClick={handleScrollToTop}>Services</Link></li>
                   <li><Link to="/team" onClick={handleScrollToTop}>Our Team</Link></li>
-                  <li><Link to="/services" onClick={handleScrollToTop}>Customer Stories</Link></li>
+                  <li><Link to="/customer-stories" onClick={handleScrollToTop}>Customer Stories</Link></li>
                 </ul>
               </div>
             </div>

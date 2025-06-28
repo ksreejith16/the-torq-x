@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <>
       <Banner />
-      <LogoCarousel />
+      {/* <LogoCarousel /> */}
 
       
       {/* <About /> */}

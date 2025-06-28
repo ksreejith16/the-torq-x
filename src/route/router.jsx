@@ -13,11 +13,12 @@ import NotFound from "../pages/404";
 import BlogSidebar from "../pages/blog-sidebar";
 import TermsConditions from "../pages/terms-conditions";
 import PrivacyPolicy from "../pages/privacy-policy";
-import OurTeam from "../pages/Ourteam";
+
 import Products from "../pages/Products";
 import CaseStudy from "../components/CaseStudy";
 import Fetuses from "../components/fetuses";
 import ScrollToTop from "../components/ScrollToTop"; 
+import TeamComponent from "../components/teamComponent";
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -30,7 +31,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/team",
-                element: <OurTeam/>
+                element: <TeamComponent/>
             },
             {
                 path: "/contact",
@@ -54,7 +55,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/team",
-                element: <Team />
+                element: <TeamComponent />
             },
             {
                 path: "/services",

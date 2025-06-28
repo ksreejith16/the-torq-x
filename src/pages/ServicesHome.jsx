@@ -4,7 +4,7 @@ import service1 from '../assets/services/service_1.png';
 import service2 from '../assets/services/service_2.png';
 import service3 from '../assets/services/service_3.png';
 import service4 from '../assets/services/service_4.png';
-
+import { useNavigate } from 'react-router-dom';
 const serviceshome = [
   {
     id: 1,
@@ -37,7 +37,7 @@ const servicesHome = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
+ const navigate = useNavigate();
   return (
     <div className="serviceshome">
       <h1 className="serviceshome-title">Our services</h1>
@@ -63,7 +63,7 @@ const servicesHome = () => {
     if (service.id === 4) {
       window.open("https://thetorq.ai", "_blank");
     } else {
-      window.location.href = "/contact";
+      navigate("/contact");
     }
   }}
 >
