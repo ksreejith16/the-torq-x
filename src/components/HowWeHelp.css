@@ -1,7 +1,34 @@
 .how-we-help-container {
   border-radius: 20px;
   box-shadow: 0px 4px 20px rgba(255, 215, 0, 0.2);
-  overflow: hidden; /* Ensures smooth section separation */
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.how-we-help-container:hover {
+  box-shadow: 0px 8px 40px rgba(255, 215, 0, 0.4), 
+              0px 0px 60px rgba(255, 180, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Add subtle glow animation */
+.how-we-help-container::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ffb400, #af002d, #ffb400);
+  border-radius: 22px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.how-we-help-container:hover::before {
+  opacity: 0.3;
 }
 
 /* Ensuring both sections are equal in height */
@@ -9,24 +36,63 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 50vh; /* Ensures both sections take equal space */
+  min-height: 50vh;
   text-align: center;
   padding: 80px 20px;
+  position: relative;
 }
 
-/* Top Section - Black Background */
+/* Top Section - Black Background with subtle texture */
 .help-top {
-  background: black;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
   padding: 80px 20px 40px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Bottom Section - Now with Video Background */
+/* Add animated background pattern */
+.help-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 180, 0, 0.03) 50%, 
+    transparent 100%);
+  animation: shimmer 8s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Bottom Section - Enhanced Video Background */
 .help-bottom {
-  position: relative; /* Required for absolute positioning of video */
+  position: relative;
   padding: 40px 20px 80px;
   text-align: center;
-  overflow: hidden; /* Ensures video stays within container */
+  overflow: hidden;
+}
+
+/* Add overlay for better text readability */
+.help-bottom::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, 
+    rgba(0, 0, 0, 0.6) 0%, 
+    rgba(0, 0, 0, 0.3) 50%, 
+    rgba(0, 0, 0, 0.6) 100%);
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* Video Background Styling */
@@ -36,8 +102,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures video covers the entire section */
-  z-index: 0; /* Places video behind the content */
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.7) contrast(1.1) saturate(1.2);
+  transition: filter 0.6s ease;
+}
+
+.help-bottom:hover .video-background {
+  filter: brightness(0.8) contrast(1.2) saturate(1.3);
+  transform: scale(1.02);
 }
 
 .content-wrapper {
@@ -46,30 +119,73 @@
   font-size: 10px;
   color: #ffb400;
   opacity: 0.9;
-  position: relative; /* Ensures content appears above video */
-  z-index: 1;
+  position: relative;
+  z-index: 2;
+  transition: all 0.4s ease;
 }
 
-/* Title Styling - Gradient */
+.help-top .content-wrapper {
+  animation: fadeInUp 1s ease-out;
+}
+
+.help-bottom .content-wrapper {
+  animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+}
+
+/* Title Styling - Enhanced Gradient with animation */
 .help-title {
   font-size: 2.7rem;
   font-weight: 700;
   text-transform: uppercase;
-  background: #ffb400;
+  background: linear-gradient(45deg, #ffb400, #ffd700, #ffb400);
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 15px;
+  position: relative;
+  animation: gradientShift 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.help-title:hover {
+  transform: scale(1.02);
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 .help-title span {
   background: linear-gradient(45deg, #ffb400, #ff0000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .torq-x {
   font-weight: 700;
   color: #ffb400;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.torq-x:hover {
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 180, 0, 0.5);
 }
 
 .help-description {
@@ -78,6 +194,14 @@
   color: white;
   margin-bottom: 20px;
   line-height: 1.6;
+  position: relative;
+  transition: all 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.help-description:hover {
+  color: #fafafa;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* Bottom Section Text */
@@ -86,9 +210,20 @@
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 30px;
+  position: relative;
+  transition: all 0.4s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.5px;
 }
 
-/* CTA Button */
+.help-highlight:hover {
+  color: #ffd700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9),
+               0 0 20px rgba(255, 180, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Enhanced CTA Button */
 .help-button {
   font-size: 1.2rem;
   padding: 12px 30px;
@@ -98,11 +233,87 @@
   color: white;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(255, 180, 0, 0.3);
+}
+
+.help-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.help-button:hover::before {
+  left: 100%;
 }
 
 .help-button:hover {
   background: linear-gradient(45deg, #af002d, #ffb400);
-  transform: scale(1.05);
-  box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0px 8px 25px rgba(255, 215, 0, 0.5),
+              0px 0px 30px rgba(175, 0, 45, 0.3);
+  color: #ffffff;
+}
+
+.help-button:active {
+  transform: scale(0.98) translateY(0px);
+  transition: all 0.1s ease;
+}
+
+/* Add floating particles effect */
+.help-top::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #ffb400;
+  border-radius: 50%;
+  top: 20%;
+  left: 10%;
+  opacity: 0.3;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% { 
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 0.6;
+  }
+}
+
+/* Responsive enhancements */
+@media (max-width: 768px) {
+  .help-title {
+    font-size: 2.2rem;
+  }
+  
+  .help-description {
+    font-size: 1.3rem;
+  }
+  
+  .help-highlight {
+    font-size: 1.2rem;
+  }
+  
+  .help-button {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+  
+  .how-we-help-container:hover {
+    transform: none;
+  }
 }
