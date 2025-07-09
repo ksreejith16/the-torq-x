@@ -23,8 +23,9 @@ const HowWeHelp = () => {
             The Power of Integrated Process Framework 
           </h2>
           <p className="help-description">
-            The true power of Integrated Process Framework isn't in the tech—it's how we make it work for you. At{" "}
-            <span className="torq-x">Torq X</span>, we craft a custom LLM that grows with your business, making AI do what you need.
+            The real strength of our Integrated Process Framework is how it works for you. At{" "}
+            <span className="torq-x">Torq X</span>, it smoothly blends ASPICE, Functional Safety, and Cybersecurity in a flexible, plug-and-play setup that’s customized to fit your needs.
+
           </p>
         </div>
       </div>

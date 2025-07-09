@@ -42,12 +42,11 @@ const servicesHome = () => {
     <div className="serviceshome">
       <h1 className="serviceshome-title">Our services</h1>
       <p className="serviceshome-subtitle">
-        What If AI Could Just Work—Without the Hassles?
+       INTEGRATED PROCESS FRAMEWORK — WITHOUT THE SILOS
+
       </p>
       <p className="serviceshome-intro">
-        AI doesn't have to be a nightmare. At <span>Torq X</span>, we make it simple. 
-        Our AI-powered engines work seamlessly in the background—helping you solve 
-        real problems while you focus on what matters most.
+       Compliance shouldn't be chaos. At <span>Torq X</span>, we unify <b>ASPICE, Safety</b>, and <b>Security</b> into one smart, seamless framework — with built-in touchpoints that just work.
       </p>
       <div className="serviceshome-container">
         {serviceshome.map((service) => (
